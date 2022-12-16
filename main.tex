@@ -1,0 +1,59 @@
+\documentclass{brandeis-dissertation3.12}
+
+\usepackage[
+backend=biber,
+style=apa,
+sorting=nyt
+]{biblatex}
+
+\usepackage{graphicx}
+\graphicspath{ {./mahmood_22_figures/}{./stone_2022_figs/}{./lin_2021_review_figs/} }
+\usepackage{wrapfig}
+
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+
+\addbibresource{mahmood_et_al.bib}
+\addbibresource{stone_2022.bib}
+\addbibresource{lin_2021_review.bib}
+
+\title{On Dynamic Neural Responses and Neural Network Interactions during Taste Processing}
+\author{Abuzar Mahmood}
+\graduationmonth{February}
+\graduationyear{2022}
+\program{Interdepartmental Program in Neuroscience}
+\advisor{Donald B. Katz}
+\signoff{Eric Chaslow}{Dean}
+\committee{Stephen Van Hooser, Biology\\
+Paul Miller, Biology\\
+Ian Davison, Biology, Boston University}
+
+\begin{document}
+
+\maketitlepage
+\makeapproval
+\makecopyright
+
+\begin{dissertation-acknowledgements}
+Thank you to John Burt for assisting with creating this package.
+\end{dissertation-acknowledgements}
+
+\begin{dissertation-abstract}
+It is well understood that the computational capacity of the brain (and artificial neural networks, which draw inspiration from brain function) is derived from the nonlinear processing occurring in neural circuits. Such non-linearity is instantiated in the brain, not only by nonlinear transformation of neural “codes” across brain regions, but similar transformations within single brain regions over time. Such temporal transformation of encoding in brain regions is allowed by recurrency of neural connections (circuits providing inputs to themselves), and generates dynamic activity patterns during neural processing for many tasks. Furthermore, such dynamics allow the same neurons to essentially behave in different ways over time, and hence perform different functions over time. Consequently, this means that neural circuits interact with each other in different ways over time. However, brain function is further influenced by body states (e.g. sickness), context (e.g. new vs. familiar environments), and behavioral modes as attention vs. disengagement or awake vs. sleep. Therefore, intra- and inter-circuit interactions and dynamics are embedded in a hierarchy of timescales. 
+Although the dynamics of neural activity is a rapidly evolving topic of research, the contribution of this aspect of neural processing is still being understood. The work in this thesis investigates how neural processing and communication between neural populations change with brain/body states, and over shorter periods of time during stimulus-evoked responses. Starting with a general introduction into neural dynamics, and inter-region communication, I go on to discuss how the same neural population responds differently depending on body state (sickness). From there, I dive into my main project discussing dynamics of multi-region communication during taste processing, ending with an exploration of changing neural “encoding” over time, and a discussing how any instance of neural responses can be considered as being generated from hierarchical processes at multiple timescales.
+\end{dissertation-abstract}
+
+\doublespacing
+
+\tableofcontents
+
+\startbody
+
+\include{chapter1.tex}
+\include{chapter2.tex}
+\include{chapter3.tex}
+\include{chapter4.tex}
+
+\chapter{Conclusion}
+
+\end{document}
