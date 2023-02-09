@@ -6,6 +6,11 @@ style=apa,
 sorting=nyt
 ]{biblatex}
 
+\pagestyle{plain}
+
+\usepackage{setspace}
+\usepackage{geometry}
+%\usepackage{showframe}
 %\usepackage{amsmath}
 
 \usepackage{graphicx}
@@ -22,8 +27,8 @@ sorting=nyt
 
 \title{On Dynamic Neural Responses and Neural Network Interactions during Taste Processing}
 \author{Abuzar Mahmood}
-\graduationmonth{February}
-\graduationyear{2022}
+\graduationmonth{May}
+\graduationyear{2023}
 \program{Interdepartmental Program in Neuroscience}
 \advisor{Donald B. Katz}
 \signoff{Eric Chaslow}{Dean}
@@ -31,13 +36,36 @@ sorting=nyt
 Paul Miller, Biology\\
 Ian Davison, Biology, Boston University}
 
+\usepackage{titlesec}    
+\titleformat{\chapter}[display]
+{\normalfont%
+    % %change this size to your needs for the first line
+    \bfseries}{\chaptertitlename\ \thechapter}{12pt}{%
+     %change this size to your needs for the second line
+    }
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+
 \begin{document}
 
 \maketitlepage
 \makeapproval
-\makecopyright
 
-\begin{dissertation-acknowledgements}
+\newpage
+\begin{center}
+\mbox{}
+\vfill
+\text{Copyright by \\ Abuzar Mahmood \\ 2023}
+\end{center}
+\newpage
+
+%\begin{dissertation-acknowledgements}
+\newpage
+\begin{center}
+\textbf{Acknowledgements}
+\end{center}
+\\
+\linespread{2}
+\begin{doublespace}
 I am indebted to many people in varying capacities for their guidance and support in helping me reach this point in my scientific career.
 
 First, I would like to thank my advisor, Donald Brian Katz, for not only being very generous with his scientific acumen and wisdom, but also for actively making sure I enjoyed my PhD. Like many of those who have passed through your lab, Don, our interactions have left an (all but surely) indelible mark on me. I have deeply enjoyed not only our scientific, but also, philosophical and cultural discussions; and from those discussions, have not only learned valuable lessons about scientific concepts, but also about performing science. I am grateful to have been part of the vivacious and discerning environment you have fostered. 
@@ -57,8 +85,10 @@ I am deeply indebted to my family, without whom I would have never had the oppor
 I am thankful to my partner, Nishaat Mukadam, who has been a voice of reason through the ups and downs of my life through this PhD. I am grateful to have had your consultation and insight through the many challenges I have faced scientifically and non-scientifically, and I am lucky to have had both your iron-clad support and your infectious joy through these years. Thank you for your friendship, for teaching me so much over the years, and for never giving up on me. Merci pour tout.
 
 Finally, I carry an unrepayable debt to the rats that have contributed to and sacrificed for the advancement of our understanding of neural processing.
+\end{doublespace}
 
-\end{dissertation-acknowledgements}
+%\end{dissertation-acknowledgements}
+\newpage
 
 \begin{dissertation-abstract}
 The computational capacity of the brain (and artificial neural networks, which draw inspiration from brain function) is derived from the nonlinear transformations carried out in neural circuits. Such non-linearity is instantiated in the brain, not only by nonlinear transformation of neural “codes” across brain regions (which could be taken to correspond to layers in an artificial neural network), but also by similar dynamic (i.e. changing) transformations within single brain regions over time. Such temporal transformation of encoding in brain regions is allowed by recurrency of neural connections (circuits providing inputs to themselves) and generates dynamic activity patterns during neural processing for many tasks. Furthermore, such dynamics allow the same neurons to essentially behave in different ways over time, and hence perform different functions over time. Consequently, this means that neural circuits interact with each other in different ways over time. However, brain function is further influenced by (long-lasting) body states (e.g. sickness), context (e.g. new vs. familiar environments), and behavioral modes as attention vs. disengagement or awake vs. sleep. Therefore, “intrinsic” dynamics in the brain are occurring with a backdrop of changing external input, hence, to advance our understanding of neural processing we need to account for the intra- and inter-circuit interactions and dynamics that are embedded in a hierarchy of timescales. 
@@ -68,6 +98,7 @@ Although the dynamics of neural activity is a rapidly evolving topic of research
 
 \doublespacing
 
+\vspace*{-1in}
 \tableofcontents
 
 %\renewcommand{\listfigurename}{List of plots}
