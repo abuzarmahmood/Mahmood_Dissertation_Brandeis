@@ -140,11 +140,16 @@ where $\text{T_i}$ is a threshold, indicating the minimum input needed for activ
 $$I_i (t)=\sum_{i}W_{ji} r_j (t)+\sigma^I \eta(t)$$
 where $\sigma\text{^I}$ is the standard deviation of the noise and $\eta$(t) is an uncorrelated white noise term with zero mean and unit standard deviation, 〈$\eta$(t)〉=0 and 〈$\eta$(t)$\eta$(t')〉=$\delta$(t-t').
 Values of the parameters are given in Table 1 below. Simulations were carried out in MATLAB (R2018a) using the Euler-Mayamara method for integration. Code is freely available online at \url{https://github.com/primon23/Two_State_Oscillators}.
+\newline
 
+\\
+\noindent
 \begin{tabular}
 \centering
     \includegraphics[width=\linewidth]{mahmood_22_figures/table1.PNG}
 \end{tabular}
+\\
+
 \noindent\underline{Phase Coherence for Network Model}
 The simulation described above was used to generate 20 trials of neural activity. The activity of both units in each “region” was summed to produce a single time-series which was treated as an analog for LFP. This LFP was then bandpass filtered (10-40 Hz) and subjected to a Hilbert transform, and instantaneous phase was estimated using the analytical signal from the transform. Since latencies of state transitions in the simulated activity are random (unlike experimental data where they are roughly bounded in latency and occur in a sequential order, a fact likely related to the model’s omission of biological processes with longer time constants, like synaptic depression/facilitation or firing rate adaptation), we calculated phase coherence for the simulated data in each state using windows of activity centered around the transition from the more$\rightarrow$less coherent state. Data across trials were aligned to state transitions from the more$\rightarrow$less coherent states and snippets with radius = 350ms (minimum duration of states across all trials) of the LFP phase were taken around the transition time. Inter-trial phase coherence calculation was performed on these aligned snippets as described above.
 
@@ -196,6 +201,7 @@ To this end, we evaluated the spiking activity of BLA ensembles using the same c
 
 This analysis revealed that models with 4 states had the highest ELBO-that 4-state models best describe BLA population activity for the 2000ms of post-stimulus activity we have used in this study (Fig. 3.4B, see Table 2 for statistics used to test these effects). Note that only 3 of these states typically appeared in the first 1500 msec-that is, in the period leading up to and including the GC “palatability-related” state-and that while we are interested in the transition out of that “palatability-related” state, we are not yet prepared to interpret the state following (which is post-decision). This number of states accords well with results from HMM modeling of GC activity (\cite{jones2007a,sadacca2016a}), supporting our suggestion that GC and BLA taste-response dynamics are similar in kind (and demonstrating that these results hold across very different analysis techniques). Furthermore, this fit was significantly higher (as was the relative advantage of the 4-state model) than that achieved by even the trial-shuffled surrogate dataset (F(2,20)=26.9, p=2.13x10$^{-6}$, 2-way repeated measures ANOVA for Shuffle Type and Number of States, n=9 recordings across 2 animals), which left each trial’s spike trains intact (Fig. 3.2), eliminating only the between-neuron coherence of single-trial dynamics. 
 
+\noindent
 \begin{tabular}
 \centering
     \includegraphics[width=\linewidth]{mahmood_22_figures/table2.PNG}
@@ -312,8 +318,19 @@ Of course, causal confirmation of this theory waits upon evidence that the two s
 
 Ultimately, a nuanced understanding of inter-region communication, and of how this communication is important for generating behavioral output, will require that we appreciate the sorts of nonlinearities and variability examined here --- that we do not smooth out potentially important sudden ensemble changes in real-time ensemble activity. The current study furthers our trial-specific understanding of neural activity and will hopefully drive further questions regarding the role of reciprocal connectivity and meta-stable dynamics in sensory processing.
 
+\newpage
+\topskip0pt
+\vspace*{\fill}
+This page is intentionally left blank.
+\vspace*{\fill}
+
 \begin{singlespace}
 \printbibliography[title={References}]
 \end{singlespace}
+
+\topskip0pt
+\vspace*{\fill}
+%This page is intentionally left blank.
+\vspace*{\fill}
 
 \end{refsection}
