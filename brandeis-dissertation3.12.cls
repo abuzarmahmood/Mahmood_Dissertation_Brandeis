@@ -23,7 +23,7 @@
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{brandeis-dissertation3.12}
     [2020/06/29 v3.12 .dtx brandeis-dissertation file]
-\LoadClass[12pt]{book}
+\LoadClass[12pt,openany]{book}
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{setspace}
 \RequirePackage{titlesec}

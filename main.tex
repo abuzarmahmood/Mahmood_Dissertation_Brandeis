@@ -1,5 +1,4 @@
-\documentclass{brandeis-dissertation3.12}
-
+\documentclass[openany,oneside]{brandeis-dissertation3.12}
 
 \usepackage[
 backend=biber,
@@ -11,7 +10,7 @@ sorting=nyt
 
 \usepackage{setspace}
 \usepackage{geometry}
-%\usepackage{showframe}
+\usepackage{showframe}
 %\usepackage{amsmath}
 
 \usepackage{graphicx}
@@ -26,6 +25,7 @@ sorting=nyt
 \addbibresource{lin_2021_review.bib}
 \addbibresource{intro_discussion_refs.bib}
 
+
 \title{On Dynamic Neural Responses and Neural Network Interactions during Taste Processing}
 \author{Abuzar Mahmood}
 \graduationmonth{May}
@@ -37,14 +37,17 @@ sorting=nyt
 Paul Miller, Biology\\
 Ian Davison, Biology, Boston University}
 
+%\setlength{\topskip}{0pt}
+\setlength{\baselineskip}{0pt}
 \usepackage{titlesec}    
 \titleformat{\chapter}[display]
-{\normalfont%
-    % %change this size to your needs for the first line
-    \bfseries}{\chaptertitlename\ \thechapter}{12pt}{%
-     %change this size to your needs for the second line
-    }
-\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+    {\normalfont\bfseries}
+    {\chaptertitlename\ \thechapter}
+    {0pt}
+    {}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+\titlespacing*{\section}{0pt}{-5pt}{20pt}
+\titlespacing*{\subsection}{0pt}{20pt}{5pt}
 
 \begin{document}
 
@@ -57,10 +60,15 @@ Ian Davison, Biology, Boston University}
 \vfill
 \text{Copyright by \\ Abuzar Mahmood \\ 2023}
 \end{center}
-\newpage
+
+\let\cleardoublepage\clearpage
+
+\frontmatter
+\setcounter{page}{4}
 
 %\begin{dissertation-acknowledgements}
-\newpage
+
+\vspace*{-0.25in}
 \begin{center}
 \textbf{Acknowledgements}
 \end{center}
@@ -108,7 +116,7 @@ Although the dynamics of neural activity is a rapidly evolving topic of research
 %\listoftables
 
 \startbody
-
+\mainmatter
 \include{chapter1.tex}
 \include{chapter2.tex}
 \include{chapter3.tex}
